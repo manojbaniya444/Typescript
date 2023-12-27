@@ -1,0 +1,26 @@
+.buttons {
+  width: 100%;
+  background-color: rgb(170, 181, 170);
+  display: flex;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 10px;
+  gap: 5px;
+}
+
+.buttons button {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.current_page {
+  background-color: rgb(182, 186, 189);
+  height: 200px;
+  text-align: center;
+  padding: 10px;
+}
+
+.buttons .active {
+  background-color: rgb(182, 186, 189);
+}
