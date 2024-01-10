@@ -4,6 +4,7 @@ type question = {
   answers: string[];
   correctAnswer: string;
   category: string;
+  id: string;
 };
 
 export const getFilteredQuestions = (categories: string[]): question[] => {

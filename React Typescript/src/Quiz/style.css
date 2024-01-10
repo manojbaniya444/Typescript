@@ -38,6 +38,33 @@
 }
 
 a {
-    text-decoration: none;
-    color: white;
+  text-decoration: none;
+  color: white;
+}
+
+.quiz {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 700px;
+  margin: 0 auto;
+  background-color: #eeeeee;
+  padding: 20px;
+}
+
+.single__question {
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 30px;
+}
+
+.quiz__button {
+  padding: 10px 20px;
+  cursor: pointer;
+  align-self: flex-start;
+}
+
+.single__question__answers {
+  display: flex;
+  gap: 5px;
 }
