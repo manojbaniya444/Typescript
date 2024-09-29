@@ -1,4 +1,4 @@
-import { useMutation, useQueryClient } from "@tanstack/react-query";
+import { useMutation } from "@tanstack/react-query";
 import React from "react";
 
 type Product = {
@@ -29,7 +29,7 @@ const AddProduct = () => {
     }
   };
 
-  const addProduct = useMutation({
+  const addProductMutation = useMutation({
     mutationFn: async (newProduct: Product) => {
       await fetch("https://fakestoreapi.com/products", {
         method: "POST",
@@ -47,7 +47,7 @@ const AddProduct = () => {
       <form
         onSubmit={(e) => {
           e.preventDefault();
-          addProduct.mutate(formData);
+          addProductMutation.mutate(formData);
         }}
       >
         <input
@@ -93,9 +93,9 @@ const AddProduct = () => {
           onChange={onChangeHandler}
         />
         <button type="submit">
-          {addProduct.isPending ? "Adding..." : "Add Product"}
+          {addProductMutation.isPending ? "Adding..." : "Add Product"}
         </button>
-        {addProduct.isSuccess && <div>Product added successfully</div>}
+        {addProductMutation.isSuccess && <div>Product added successfully</div>}
       </form>
     </div>
   );
